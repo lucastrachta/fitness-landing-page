@@ -3,11 +3,11 @@
 
 import "./App.css";
 import { motion } from "framer-motion";
-import personaltrainer2 from "./assets/personaltrainer2.jpg";
-import personaltrainer3 from "./assets/personaltrainer3.jpg";
-import gym5 from "./assets/gym5.jpg";
-import gym6 from "./assets/gym6.webp";
-import gym9 from "./assets/gym9.jpg";
+
+
+
+
+
 import whatsapp4 from "./assets/whatsapp4.jpg";
  
 import buildmuscle2 from "./assets/buildmuscle2.jpg";

@@ -65,7 +65,7 @@ function App() {
       {/* NAV */}
       <nav className="nav">
         <h2>Elite Fitness</h2>
-        <a href="https://wa.me/5493705013558" className="btn">
+        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn">
           Join Now
         </a>
       </nav>
@@ -90,7 +90,7 @@ function App() {
             Only 5 spots available this week
           </span>
 
-          <a href="https://wa.me/5493705013558" className="btn big">
+          <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn big">
             Start Free Trial
           </a>
         </motion.div>
@@ -165,7 +165,7 @@ function App() {
 
                 <span className="urgency">Only 5 spots left</span>
 
-                <a href="https://wa.me/5493705013558" className="btn">
+                <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn">
                   Get Started
                 </a>
               </div>
@@ -188,7 +188,7 @@ function App() {
           <h2>Ready to transform your body?</h2>
           <p>Join today and get your first week free</p>
 
-          <a href="https://wa.me/5493705013558" className="btn big">
+          <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn big">
             Claim Free Week
           </a>
         </div>
@@ -200,7 +200,7 @@ function App() {
           Chat with us
         </div>
 
-        <a href="https://wa.me/5493705013558" className="whatsapp-btn">
+        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="whatsapp-btn">
           <img src={whatsapp4} alt="WhatsApp" />
         </a>
       </div>

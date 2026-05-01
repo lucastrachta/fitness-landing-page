@@ -1,3 +1,6 @@
+
+
+
 import "./App.css";
 import { motion } from "framer-motion";
 import personaltrainer2 from "./assets/personaltrainer2.jpg";
@@ -6,55 +9,55 @@ import gym5 from "./assets/gym5.jpg";
 import gym6 from "./assets/gym6.webp";
 import gym9 from "./assets/gym9.jpg";
 import whatsapp4 from "./assets/whatsapp4.jpg";
+ 
+import buildmuscle2 from "./assets/buildmuscle2.jpg";
+import loseweight10 from "./assets/loseweight10.jpg";
+import coaching from "./assets/coaching.jpg";
+import before3 from "./assets/before3.jpg";
+import after9 from "./assets/after9.jpg";
 
 function App() {
 
-const plans = [
-  {
-    name: "Basic",
-    price: "$20",
-    text: "Access to gym equipment"
-  },
-  {
-    name: "Standard",
-    price: "$30",
-    text: "Gym + group classes"
-  },
-  {
-    name: "Premium",
-    price: "$50",
-    text: "All access + personal trainer"
-  }
-];
-
   const services = [
     {
-      title: "Personal Training",
-      text: "Train with professional coaches",
-      img: personaltrainer2
+      title: "Lose Weight Fast",
+      text: "Burn fat and drop your first 3kg in 30 days",
+      img: loseweight10
     },
     {
-      title: "Weight Loss",
-      text: "Burn fat and get in shape fast",
-      img: gym9
+      title: "Build Muscle",
+      text: "Gain strength and transform your body",
+      img: buildmuscle2
     },
     {
-      title: "Muscle Gain",
-      text: "Build strength and muscle effectively",
-      img:  personaltrainer3
+      title: "Personal Coaching",
+      text: "Work 1:1 with expert trainers",
+      img: coaching
     }
   ];
 
-  const images = [
-  
-    gym5,
-    gym6,
-  
+  const plans = [
+    {
+      name: "Starter",
+      price: "$20",
+      text: "Gym access",
+    },
+    {
+      name: "Pro",
+      price: "$30",
+      text: "Classes + nutrition",
+      highlight: true
+    },
+    {
+      name: "Elite",
+      price: "$50",
+      text: "Trainer + full plan"
+    }
   ];
 
   const testimonials = [
-    { text: "I lost 10kg in 3 months!", name: "Lucas" },
-    { text: "Best gym in the city, amazing trainers.", name: "Mike" }
+    { text: "Lost 10kg in 3 months 🔥", name: "Lucas" },
+    { text: "Best decision of my life.", name: "Mike" }
   ];
 
   return (
@@ -62,224 +65,369 @@ const plans = [
       {/* NAV */}
       <nav className="nav">
         <h2>Elite Fitness</h2>
-        <a href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20improve%20my%20website" className="btn">Join Now</a>
+        <a href="https://wa.me/5493705013558" className="btn">
+          Join Now
+        </a>
       </nav>
 
-  
-
-        {/* HERO */}
-        <section className="hero">
-        
-          <motion.div
-            className="hero-box"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1>Transform your body today</h1>
-            <p>Train hard. Get results. Feel unstoppable.</p>
-
-            <motion.a
-              href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20improve%20my%20website"
-              className="btn big"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Start Now
-            </motion.a>
-          </motion.div>
-       
-        </section>
- 
-        {/* SERVICES */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+      {/* HERO */}
+      <section className="hero">
+        <motion.div
+          className="hero-box"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
         >
-          <div className="container">
-          <h2>Our Programs</h2>
+          <h1>Lose 3kg in 30 days or your money back</h1>
+          <p>Proven training system used by 500+ clients</p>
+
+          <div className="hero-stats">
+            <span>🔥 500+ Clients</span>
+            <span>⭐ 4.9 Rating</span>
+            <span>🏆 5 Years Experience</span>
+          </div>
+
+          <span className="hero-badge">
+            Only 5 spots available this week
+          </span>
+
+          <a href="https://wa.me/5493705013558" className="btn big">
+            Start Free Trial
+          </a>
+        </motion.div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="section" >
+        <div className="container">
+          <h2>What You Get</h2>
 
           <div className="grid">
             {services.map((item, i) => (
-              <motion.div
-                key={i}
-                className="card apple"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <img src={item.img} />
+              <div key={i} className="card apple">
+                <img src={item.img} className="card-img" />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
-          </div>
-        </motion.section>
+        </div>
+      </section>
 
-        {/* IMAGES */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="container">
-          <h2>Our Gym</h2>
+      {/* BEFORE AFTER */}
+      <section className="section">
+        <div className="container">
+          <h2>Real Transformations</h2>
 
           <div className="grid">
-            {images.map((img, i) => (
-              <motion.div
-                key={i}
-                className="card apple"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <img src={img} />
-              </motion.div>
-            ))}
+            <div className="card apple">
+              <img src={before3} className="card-img" />
+              <p>Before</p>
+            </div>
+
+            <div className="card apple">
+              <img src={after9} className="card-img" />
+              <p>After</p>
+            </div>
           </div>
-          </div>
-        </motion.section>
+        </div>
+      </section>
 
-
-
-<motion.section
-  className="section"
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
->
-  <div className="container">
-  <h2>Membership Plans</h2>
-
-  <div className="grid">
-    {plans.map((plan, i) => (
-      <motion.div
-        key={i}
-        className="card apple"
-        whileHover={{ scale: 1.05 }}
-      >
-        <h3>{plan.name}</h3>
-        <h2>{plan.price}/month</h2>
-        <p>{plan.text}</p>
-
-        <a href=" https://wa.me/5493705013558?text=Hi%2C%20can%20you%20build%20me%20a%20site%20like%20this%3F" className="btn">
-          Join Now
-        </a>
-      </motion.div>
-    ))}
-  </div>
-  </div>
-</motion.section>
-
-
-
-
-        {/* TESTIMONIALS */}
-        <motion.section
-          className="section"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="container">
-          <h2>What Our Clients Say</h2>
+      {/* TESTIMONIALS */}
+      <section className="section">
+        <div className="container">
+          <h2>What Clients Say</h2>
 
           <div className="grid">
-            {testimonials.map((item, i) => (
-              <motion.div
-                key={i}
-                className="card apple"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <p>"{item.text}"</p>
-                <span>- {item.name}</span>
-              </motion.div>
+            {testimonials.map((t, i) => (
+              <div key={i} className="card apple">
+                <p>"{t.text}"</p>
+                <span>- {t.name}</span>
+              </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section className="section">
+        <div className="container">
+          <h2>Choose Your Plan</h2>
+
+          <div className="grid">
+            {plans.map((plan, i) => (
+              <div
+                key={i}
+                className={`card apple ${plan.highlight ? "highlight" : ""}`}
+              >
+                <h3>{plan.name}</h3>
+                <h2>{plan.price}/month</h2>
+                <p>{plan.text}</p>
+
+                <span className="urgency">Only 5 spots left</span>
+
+                <a href="https://wa.me/5493705013558" className="btn">
+                  Get Started
+                </a>
+              </div>
+            ))}
           </div>
-        </motion.section>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <motion.section
-          className="cta"
-          id="contact"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="container">
-          <h2>Ready to start your transformation?</h2>
+      {/* GUARANTEE */}
+      <section className="section">
+        <div className="container">
+          <h2>100% Risk-Free</h2>
+          <p>If you don’t see results in 30 days, we refund you.</p>
+        </div>
+      </section>
 
-          <motion.a
-            href=" https://wa.me/5493705013558?text=Hello%20I%20want%20to%20start%20a%20project%20with%20you"
-            className="btn big"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Now
-          </motion.a>
-          </div>
-        </motion.section>
+      {/* CTA FINAL */}
+      <section className="cta">
+        <div className="container">
+          <h2>Ready to transform your body?</h2>
+          <p>Join today and get your first week free</p>
 
-         {/* WHATSAPP */}
-      {/* <a href="https://wa.me/5491123456789" className="whatsapp">
-  <img src={whatsapp4} alt="WhatsApp"className="whatsapp-icon" /> 
-    
-      </a>  
-      */}
+          <a href="https://wa.me/5493705013558" className="btn big">
+            Claim Free Week
+          </a>
+        </div>
+      </section>
 
+      {/* WHATSAPP */}
+      <div className="whatsapp-container">
+        <div className="whatsapp-tooltip">
+          Chat with us
+        </div>
 
-<div className="whatsapp-container">
-        
-        <motion.div
-          className="whatsapp-tooltip"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-      Chat with us on WhatsApp
-        </motion.div>
-
-        <motion.a
-          href="https://wa.me/5493705013558?text=Hello%20I%20want%20to%20start%20a%20project%20with%20you"
-          className="whatsapp-btn"
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-          whileHover={{ scale: 1.15 }}
-        >
-          {/* aqui abajo va la imagen y puedo poner texto tambien */}
+        <a href="https://wa.me/5493705013558" className="whatsapp-btn">
           <img src={whatsapp4} alt="WhatsApp" />
-        </motion.a>
-
+        </a>
       </div>
-
-
-
     </>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+//PRIMERA VERSIÓN DE LA LANDING MEJORADA CON IA QUE LA COMENTO Y LA ULTIMA VERSION
+// (SEGUNDA) ES LA QUE ESTA SIN COMENTAR Y SE VE EN VERCEL  
+
+// import "./App.css";
+// import { motion } from "framer-motion";
+// import personaltrainer2 from "./assets/personaltrainer2.jpg";
+// import personaltrainer3 from "./assets/personaltrainer3.jpg";
+// import gym5 from "./assets/gym5.jpg";
+// import gym6 from "./assets/gym6.webp";
+// import gym9 from "./assets/gym9.jpg";
+// import whatsapp4 from "./assets/whatsapp4.jpg";
+
+// function App() {
+
+//   const plans = [
+//     {
+//       name: "Starter",
+//       price: "$20",
+//       text: "Gym access + locker included"
+//     },
+//     {
+//       name: "Pro",
+//       price: "$30",
+//       text: "Classes + nutrition plan",
+//       highlight: true
+//     },
+//     {
+//       name: "Elite",
+//       price: "$50",
+//       text: "Personal trainer + custom plan"
+//     }
+//   ];
+
+//   const services = [
+//     {
+//       title: "Personal Training",
+//       text: "Get faster results with expert guidance",
+//       img: personaltrainer2
+//     },
+//     {
+//       title: "Weight Loss",
+//       text: "Lose weight and feel confident in weeks",
+//       img: gym9
+//     },
+//     {
+//       title: "Muscle Gain",
+//       text: "Build muscle and transform your physique",
+//       img: personaltrainer3
+//     }
+//   ];
+
+//   const images = [gym5, gym6];
+
+//   const testimonials = [
+//     { text: "I lost 10kg in just 12 weeks. Best decision ever.", name: "Lucas" },
+//     { text: "Results in 30 days. Trainers are amazing.", name: "Mike" }
+//   ];
+
+//   return (
+//     <>
+//       {/* NAV */}
+//       <nav className="nav">
+//         <h2>Elite Fitness</h2>
+//         <a href="https://wa.me/5493705013558?text=I%20want%20to%20join%20the%20gym" className="btn">
+//           Join Now
+//         </a>
+//       </nav>
+
+//       {/* HERO */}
+//       <section className="hero">
+//         <motion.div
+//           className="hero-box"
+//           initial={{ opacity: 0, y: 40 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.8 }}
+//         >
+//           <h1>Lose your first 3kg in 30 days</h1>
+//           <p>Join Elite Fitness and start your transformation today</p>
+
+//           <span className="hero-badge">
+//             🔥 Limited spots available this month
+//           </span>
+
+//           <motion.a
+//             href="https://wa.me/5493705013558?text=I%20want%20to%20start%20my%20transformation"
+//             className="btn big"
+//             whileHover={{ scale: 1.05 }}
+//             whileTap={{ scale: 0.95 }}
+//           >
+//             Claim Your Free Trial
+//           </motion.a>
+//         </motion.div>
+//       </section>
+
+//       {/* SERVICES */}
+//       <motion.section
+//         className="section"
+//         initial={{ opacity: 0, y: 60 }}
+//         whileInView={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//         viewport={{ once: true }}
+//       >
+//         <div className="container">
+//           <h2>Programs That Get Results</h2>
+
+//           <div className="grid">
+//             {services.map((item, i) => (
+//               <motion.div
+//                 key={i}
+//                 className="card apple"
+//                 whileHover={{ scale: 1.05 }}
+//               >
+//                 <img src={item.img} />
+//                 <h3>{item.title}</h3>
+//                 <p>{item.text}</p>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </motion.section>
+
+//       {/* GYM IMAGES */}
+//       <motion.section className="section">
+//         <div className="container">
+//           <h2>Our Gym</h2>
+
+//           <div className="grid">
+//             {images.map((img, i) => (
+//               <div key={i} className="card apple">
+//                 <img src={img} />
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </motion.section>
+
+//       {/* PRICING */}
+//       <motion.section className="section">
+//         <div className="container">
+//           <h2>Choose Your Plan</h2>
+
+//           <div className="grid">
+//             {plans.map((plan, i) => (
+//               <motion.div
+//                 key={i}
+//                 className={`card apple ${plan.highlight ? "highlight" : ""}`}
+//                 whileHover={{ scale: 1.05 }}
+//               >
+//                 <h3>{plan.name}</h3>
+//                 <h2>{plan.price}/month</h2>
+//                 <p>{plan.text}</p>
+
+//                 <span className="urgency">Only 5 spots left</span>
+
+//                 <a
+//                   href="https://wa.me/5493705013558?text=I%20want%20this%20plan"
+//                   className="btn"
+//                 >
+//                   Start My Transformation
+//                 </a>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </motion.section>
+
+//       {/* TESTIMONIALS */}
+//       <motion.section className="section">
+//         <div className="container">
+//           <h2>Real Results</h2>
+
+//           <div className="grid">
+//             {testimonials.map((item, i) => (
+//               <div key={i} className="card apple">
+//                 <p>"{item.text}"</p>
+//                 <span>- {item.name}</span>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </motion.section>
+
+//       {/* CTA FINAL */}
+//       <section className="cta">
+//         <div className="container">
+//           <h2>Start your transformation today</h2>
+//           <p>Join now and get your first week free</p>
+
+//           <a
+//             href="https://wa.me/5493705013558?text=I%20want%20to%20start"
+//             className="btn big"
+//           >
+//             Claim Free Week
+//           </a>
+//         </div>
+//       </section>
+
+//       {/* WHATSAPP FLOAT */}
+//       <div className="whatsapp-container">
+//         <div className="whatsapp-tooltip">
+//           Chat with us on WhatsApp
+//         </div>
+
+//         <a
+//           href="https://wa.me/5493705013558"
+//           className="whatsapp-btn"
+//         >
+//           <img src={whatsapp4} alt="WhatsApp" />
+//         </a>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default App;

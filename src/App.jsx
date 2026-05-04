@@ -211,6 +211,43 @@ function App() {
         </div>
       </section>
 
+<section className="section contact-pro">
+  <div className="container">
+    <h2>Contact Us</h2>
+
+    <div className="contact-grid">
+
+      {/* INFO */}
+      <div className="card apple contact-info">
+        <p>📍 Address: Av. Siempre Viva 123</p>
+        <p>📞 Phone: +54 9 11 1234-5678</p>
+        <p>🕐 Hours: Mon - Fri 9:00 - 18:00</p>
+
+        <a
+          href="https://wa.me/5493705013558?text=I%20want%20to%20book%20an%20appointment"
+          className="btn"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      {/* MAPA */}
+      <div className="card apple contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=..."
+          width="100%"
+          height="250"
+          style={{ border: 0 }}
+          loading="lazy"
+          title="map"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
       {/* WHATSAPP */}
       <div className="whatsapp-container">
         <div className="whatsapp-tooltip">

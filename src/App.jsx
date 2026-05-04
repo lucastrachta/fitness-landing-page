@@ -104,7 +104,7 @@ function App() {
           <div className="grid">
             {services.map((item, i) => (
               <div key={i} className="card apple">
-                <img src={item.img} className="card-img" />
+                <img src={item.img} />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
@@ -120,12 +120,12 @@ function App() {
 
           <div className="grid">
             <div className="card apple">
-              <img src={before3} className="card-img" />
+              <img src={before3}  />
               <p>Before</p>
             </div>
 
             <div className="card apple">
-              <img src={after9} className="card-img" />
+              <img src={after9}  />
               <p>After</p>
             </div>
           </div>

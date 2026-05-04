@@ -96,6 +96,23 @@ function App() {
         </motion.div>
       </section>
 
+
+<section className="section">
+  <div className="container">
+    <div className="card apple center">
+      <h2>Why Choose Elite Fitness?</h2>
+
+      <ul className="benefits">
+        <li>🔥 Get visible results in just weeks</li>
+        <li>💪 Personalized training for your goals</li>
+        <li>⚡ Stay motivated with expert coaching</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
       {/* SERVICES */}
       <section className="section" >
         <div className="container">

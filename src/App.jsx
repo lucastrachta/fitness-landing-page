@@ -219,26 +219,36 @@ function App() {
 
       {/* INFO */}
       <div className="card apple contact-info">
-        <p>📍 Address: Av. Siempre Viva 123</p>
-        <p>📞 Phone: +54 9 11 1234-5678</p>
-        <p>🕐 Hours: Mon - Fri 9:00 - 18:00</p>
+        <h3>Visit Our Clinic</h3>
 
-        <a
-          href="https://wa.me/5493705013558?text=I%20want%20to%20book%20an%20appointment"
-          className="btn"
-        >
-          Chat on WhatsApp
-        </a>
+        <p>📍 1560 Broadway, New York, NY 10036</p>
+        <p>📞 +1 (212) 555-1234</p>
+        <p>🕐 Mon - Fri 9:00 AM - 6:00 PM</p>
+
+        <div className="contact-buttons">
+          <a
+            href="https://wa.me/12125551234?text=I%20want%20to%20book%20an%20appointment"
+            className="btn"
+          >
+            Chat on WhatsApp
+          </a>
+
+          <a
+            href="https://www.google.com/maps?q=1560+Broadway+New+York"
+            target="_blank"
+            className="btn secondary"
+          >
+            Open in Maps
+          </a>
+        </div>
       </div>
 
       {/* MAPA */}
       <div className="card apple contact-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=..."
-          width="100%"
-          height="250"
-          style={{ border: 0 }}
+          src="https://www.google.com/maps?q=1560+Broadway+New+York&output=embed"
           loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
           title="map"
         ></iframe>
       </div>
@@ -246,6 +256,8 @@ function App() {
     </div>
   </div>
 </section>
+
+
 
 
       {/* WHATSAPP */}

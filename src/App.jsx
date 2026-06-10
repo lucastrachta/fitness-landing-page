@@ -3,6 +3,8 @@
 
 import "./App.css";
 import { motion } from "framer-motion";
+import gymfondo from "./assets/gymfondo.jpg";
+ 
 
 
 
@@ -64,21 +66,33 @@ function App() {
     <>
       {/* NAV */}
       <nav className="nav">
-        <h2>Elite Fitness</h2>
-        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn">
+       <img src="src/assets/logogym3.jpg" alt="logogym" className="logo" />
+       
+  <ul className="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+       
+        <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn ">
           Join Now
         </a>
       </nav>
-
+ 
       {/* HERO */}
-      <section className="hero">
+      <section id="home" className="hero">
         <motion.div
           className="hero-box"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h1>Lose 3kg in 30 days or your money back</h1>
-          <p>Proven training system used by 500+ clients</p>
+  <img src=" src/assets/pesasbackground.jpg" alt="hero"  className="hero-img" />
+  <p className="hero-top" style={{color:"red"}}>
+    #1 Fitness Program in Your Area
+  </p>
+          <h1 style={{color:"  rgb(231, 82, 82)"}}>Lose 3kg in 30 days or your money back</h1>
+          <p style={{color:"yellow"}}>Proven training system used by 500+ clients</p>
 
           <div className="hero-stats">
             <span>🔥 500+ Clients</span>
@@ -98,23 +112,41 @@ function App() {
 
 
 <section className="section">
+
+ <img src={gymfondo} alt="" className="section-bg" />
+
   <div className="container">
     <div className="card apple center">
-      <h2>Why Choose Elite Fitness?</h2>
+      <h2>Why Choose Elite Fitness?  </h2>
 
       <ul className="benefits">
-        <li>🔥 Get visible results in just weeks</li>
-        <li>💪 Personalized training for your goals</li>
-        <li>⚡ Stay motivated with expert coaching</li>
+        <li className="benefit"> Get visible results in just weeks</li>
+        <li className="benefit"> Personalized training for your goals</li>
+        <li className="benefit"> Stay motivated with expert coaching</li>
       </ul>
     </div>
   </div>
 </section>
 
+<br />
 
+<section id="about" className="about">
+  <div className="container">
+    <h2>About Us</h2>
+
+    <p>
+      About Us
+
+At Elite Fitness, we help people achieve their fitness goals through expert coaching, personalized training, and a supportive community. Whether you're looking to lose weight, build muscle, or improve your overall health, our team is here to guide you every step of the way.
+
+Join us and start your fitness journey today.
+
+    </p>
+  </div>
+</section>
 
       {/* SERVICES */}
-      <section className="section" >
+      <section id="services" className="section" >
         <div className="container">
           <h2>What You Get</h2>
 
@@ -151,6 +183,9 @@ function App() {
 
       {/* TESTIMONIALS */}
       <section className="section">
+
+
+
         <div className="container">
           <h2>What Clients Say</h2>
 
@@ -170,7 +205,27 @@ function App() {
         <div className="container">
           <h2>Choose Your Plan</h2>
 
-          <div className="grid">
+
+<div className="grid grid2">
+  {plans.map((plan, i) => (
+    <div
+      key={i}
+      className={`card-apple ${plan.highlight ? "highlight" : ""}`}
+    >
+      <h3>{plan.name}</h3>
+      <h2>{plan.price}/month</h2>
+      <p>{plan.text}</p> 
+         <span className="urgency">Only 5 spots left</span>
+
+                <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn">
+                  Get Started
+                </a>
+    </div>
+  ))}
+</div>
+
+
+          {/* <div className="grid grid2 ">
             {plans.map((plan, i) => (
               <div
                 key={i}
@@ -180,21 +235,17 @@ function App() {
                 <h2>{plan.price}/month</h2>
                 <p>{plan.text}</p>
 
-                <span className="urgency">Only 5 spots left</span>
-
-                <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn">
-                  Get Started
-                </a>
+            
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* GUARANTEE */}
       <section className="section">
         <div className="container">
-          <h2>100% Risk-Free</h2>
+          <h2 className="h2border">100% Risk-Free</h2>
           <p>If you don’t see results in 30 days, we refund you.</p>
         </div>
       </section>
@@ -202,7 +253,7 @@ function App() {
       {/* CTA FINAL */}
       <section className="cta">
         <div className="container">
-          <h2>Ready to transform your body?</h2>
+          <h2 className="cta-title">Ready to transform your body?</h2>
           <p>Join today and get your first week free</p>
 
           <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn big">
@@ -211,9 +262,9 @@ function App() {
         </div>
       </section>
 
-<section className="section contact-pro">
+<section id="contact" className="section contact-pro">
   <div className="container">
-    <h2>Contact Us</h2>
+    <h2 >Contact Us</h2>
 
     <div className="contact-grid">
 
@@ -270,6 +321,15 @@ function App() {
           <img src={whatsapp4} alt="WhatsApp" />
         </a>
       </div>
+
+<footer className="footer">
+   <p>&copy; 2026 Zenithlabs. All rights reserved.</p>
+<p>📍 1560 Broadway, New York, NY 10036
+
+📞 +1 (212) 555-1234</p>
+
+</footer>
+
     </>
   );
 }

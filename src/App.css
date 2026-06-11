@@ -52,8 +52,10 @@ html, body {
   border-radius:15px
 }
 .nav-links {
-  display: flex;
-  gap: 140px; /* Espacio de separación entre cada enlace */  list-style: none
+    display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 50px);
+  list-style: none;
 }
 
 .nav-links a {
@@ -358,6 +360,20 @@ html, body {
   width: 30px;
 }
 
+
+.hamburger {
+    display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1001;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -381,7 +397,7 @@ html, body {
     width: 100%;
   }
  body {
-    background: #111827; /* más claro que negro puro */
+    background: #7c7d81; /* más claro que negro puro */
   }
 /* mejoras css mobile que me paso la ia para agregar (sumar) lo ultimo si es igual pisa
 a lo primero si tiene diferencias no lo pisa */
@@ -390,7 +406,7 @@ a lo primero si tiene diferencias no lo pisa */
 
   /* BODY */
   body {
-    background: #111827;
+    background: #7c7d81;
   }
 
   /* HERO */
@@ -517,9 +533,53 @@ a lo primero si tiene diferencias no lo pisa */
     flex-direction: column;
   }
 
+/* css mobile menu hamburguesa */
+
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-btn {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+  top: 75px;
+  right: 10px;
+  width: 50%; /* o 40% si lo querés más angosto */
+  background: #000;
+  border-radius: 12px;
+  padding: 20px 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+    /* resto de tus estilos */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
+
+
+
+
 }
 /* fin css mobile */
 
+/* css menu hamburguesa que no es del responsive pero es para el menu hamburguesa */
+
+ 
 
 /* CSS BENEFITS */
 .center {
@@ -780,4 +840,66 @@ a lo primero si tiene diferencias no lo pisa */
   position: relative;
   z-index: 2;
   color: #ffffff;
+}
+
+/* css footer */
+
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+}
+
+.footer-links {
+  margin: 1.5rem 0;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #60a5fa;
+}
+
+.footer-contact {
+  margin-bottom: 1.5rem;
+}
+
+.footer-copy {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+
+/* otro query pero mas grande que de celulares */
+@media (max-width: 1200px) {
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 80px;
+  }
 }

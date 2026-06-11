@@ -2,9 +2,13 @@
 
 
 import "./App.css";
+import { useState } from "react";
+
+
 import { motion } from "framer-motion";
 import gymfondo from "./assets/gymfondo.jpg";
- 
+ import pesasbackground from "./assets/pesasbackground.jpg";
+ import logogym3 from "./assets/logogym3.jpg";
 
 
 
@@ -62,11 +66,58 @@ function App() {
     { text: "Best decision of my life.", name: "Mike" }
   ];
 
+
+// esto de abajo es para el menu hamburguesa que se muestra en celular y se oculta en desktop,
+const [menuOpen, setMenuOpen] = useState(false);
+
+
   return (
     <>
       {/* NAV */}
+    
+    <nav className="nav">
+  <img src={logogym3} alt="logogym" className="logo" />
+
+  <div
+    className="hamburger"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    ☰
+  </div>
+
+  <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+
+    {/* El botón se mete dentro del menú en celular */}
+    <li className="mobile-btn">
+      <a
+        href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this"
+        className="btn"
+      >
+        Join Now
+      </a>
+    </li>
+  </ul>
+
+  <a
+    href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this"
+    className="btn desktop-btn"
+  >
+    Join Now
+  </a>
+</nav>
+    
+    
+    
+    
+      {/*
+     
+      este nav es el que era sin menu hamburguesa ahora le agregue cosas para que tenga menu hamburguesa y lo que era antes sin hamburguesa esta abajo comentado
       <nav className="nav">
-       <img src="src/assets/logogym3.jpg" alt="logogym" className="logo" />
+       <img src={logogym3} alt="logogym" className="logo" />
        
   <ul className="nav-links">
     <li><a href="#home">Home</a></li>
@@ -78,7 +129,7 @@ function App() {
         <a href="https://wa.me/5493705013558?text=Hi%20I%20want%20a%20page%20like%20this" className="btn ">
           Join Now
         </a>
-      </nav>
+      </nav> */}
  
       {/* HERO */}
       <section id="home" className="hero">
@@ -87,7 +138,7 @@ function App() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
         >
-  <img src=" src/assets/pesasbackground.jpg" alt="hero"  className="hero-img" />
+  <img src={pesasbackground} alt="hero"  className="hero-img" />
   <p className="hero-top" style={{color:"red"}}>
     #1 Fitness Program in Your Area
   </p>
@@ -137,9 +188,7 @@ function App() {
     <p>
       About Us
 
-At Elite Fitness, we help people achieve their fitness goals through expert coaching, personalized training, and a supportive community. Whether you're looking to lose weight, build muscle, or improve your overall health, our team is here to guide you every step of the way.
-
-Join us and start your fitness journey today.
+ At Elite Fitness, we help people build strength, improve health, and reach their fitness goals. With expert coaching, modern equipment, and a motivating environment, we're here to support every step of your journey.
 
     </p>
   </div>
@@ -170,12 +219,12 @@ Join us and start your fitness journey today.
           <div className="grid">
             <div className="card apple">
               <img src={before3}  />
-              <p>Before</p>
+              <p  style={{ fontSize: "24px", color: "red" }}  >Before</p>
             </div>
 
             <div className="card apple">
               <img src={after9}  />
-              <p>After</p>
+              <p  style={{ fontSize: "24px", color: "red" }}  >After</p>
             </div>
           </div>
         </div>
@@ -322,14 +371,31 @@ Join us and start your fitness journey today.
         </a>
       </div>
 
-<footer className="footer">
+{/* <footer className="footer">
    <p>&copy; 2026 Zenithlabs. All rights reserved.</p>
 <p>📍 1560 Broadway, New York, NY 10036
 
 📞 +1 (212) 555-1234</p>
 
-</footer>
+</footer> */}
+<footer className="footer">
+  <div className="footer-content">
+    
+    
 
+    <div className="footer-contact">
+      <p>📧 info@elitefitness.com 📍 1560 Broadway, New York, NY 10036
+</p>
+      <p>📞 +1 (555) 123-4567</p>
+    </div>
+
+    <p className="footer-copy">
+      © 2026 Elite Fitness. All rights reserved.
+    </p><p className="footer-powered">
+  Powered by Zenith Labs 🚀
+</p>
+  </div>
+</footer>
     </>
   );
 }

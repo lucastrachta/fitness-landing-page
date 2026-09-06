@@ -714,7 +714,7 @@ a lo primero si tiene diferencias no lo pisa */
   text-decoration: underline;
   text-underline-offset: 8px;      /* Espacio entre el texto y la línea */
   text-decoration-thickness: 3px;  /* Grosor de la línea */
-  text-decoration-color: red ;  /* Puedes cambiar el color de la línea si quieres */
+  text-decoration-color: rgb(255, 115, 0) ;  /* Puedes cambiar el color de la línea si quieres */
 }
 .cta-title {
   text-decoration: none;
@@ -902,4 +902,114 @@ a lo primero si tiene diferencias no lo pisa */
   .logo {
     width: 80px;
   }
+}
+
+.section-title {
+  animation: textGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow:
+      0 0 4px rgba(255, 80, 80, 0.25),
+      0 0 8px rgba(255, 200, 0, 0.10);
+  }
+
+  50% {
+    text-shadow:
+      0 0 12px rgba(255, 80, 80, 0.55),
+      0 0 25px rgba(255, 120, 50, 0.35),
+      0 0 40px rgba(255, 200, 0, 0.18);
+  }
+
+  100% {
+    text-shadow:
+      0 0 4px rgba(255, 80, 80, 0.25),
+      0 0 8px rgba(255, 200, 0, 0.10);
+  }
+}
+
+.service-card {
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow:
+      0 0 25px rgba(0, 0, 0, 0.45),
+    0 0 35px rgba(255, 141, 80, 0.25);
+}
+
+.guarantee-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.guarantee-card {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.35),
+    0 0 35px rgba(34, 197, 94, 0.12);
+}
+
+.guarantee-icon {
+  font-size: 58px;
+  flex-shrink: 0;
+}
+
+.guarantee-content {
+  text-align: left;
+}
+
+.guarantee-content h2 {
+  margin-bottom: 12px;
+}
+
+.guarantee-label {
+  color: #22c55e;
+  font-weight: 800;
+  margin-bottom: 8px;
+  opacity: 1 !important;
+}
+
+.guarantee-content p {
+  max-width: 560px;
+}
+
+@media (max-width: 768px) {
+  .guarantee-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .guarantee-content {
+    text-align: center;
+  }
+
+  .guarantee-icon {
+    font-size: 50px;
+  }
+}
+
+.benefit {
+  color: #ffd700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px !important;
+  font-weight: 900;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(255, 215, 0, 0.25);
 }

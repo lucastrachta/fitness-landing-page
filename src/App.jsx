@@ -1,6 +1,3 @@
-
-
-
 import "./App.css";
 import { useState } from "react";
 
@@ -168,7 +165,16 @@ const [menuOpen, setMenuOpen] = useState(false);
 
   <div className="container">
     <div className="card apple center">
-      <h2>Why Choose Elite Fitness?  </h2>
+  
+  <motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  Why Choose Elite Fitness?
+</motion.h2>
 
       <ul className="benefits">
         <li className="benefit"> Get visible results in just weeks</li>
@@ -183,7 +189,16 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 <section id="about" className="about">
   <div className="container">
-    <h2>About Us</h2>
+  
+  <motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  About Us
+</motion.h2>
 
     <p>
       About Us
@@ -197,34 +212,62 @@ const [menuOpen, setMenuOpen] = useState(false);
       {/* SERVICES */}
       <section id="services" className="section" >
         <div className="container">
-          <h2>What You Get</h2>
+      
+      <motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  What You Get
+</motion.h2>
 
           <div className="grid">
-            {services.map((item, i) => (
-              <div key={i} className="card apple">
-                <img src={item.img} />
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            ))}
-          </div>
+  {services.map((item, i) => (
+    <motion.div
+      key={i}
+      className="card apple service-card"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: i * 0.12 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -10, scale: 1.02 }}
+    >
+      <img src={item.img} alt={item.title} />
+
+      <h3>{item.title}</h3>
+
+      <p>{item.text}</p>
+    </motion.div>
+  ))}
+</div>
         </div>
       </section>
 
       {/* BEFORE AFTER */}
       <section className="section">
         <div className="container">
-          <h2>Real Transformations</h2>
+         
+         <motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  Real Transformations
+</motion.h2>
 
           <div className="grid">
             <div className="card apple">
               <img src={before3}  />
-              <p  style={{ fontSize: "24px", color: "red" }}  >Before</p>
+              <p  style={{ fontSize: "24px", color: "orange" }}  >Before</p>
             </div>
 
             <div className="card apple">
               <img src={after9}  />
-              <p  style={{ fontSize: "24px", color: "red" }}  >After</p>
+              <p  style={{ fontSize: "24px", color: "orange" }}  >After</p>
             </div>
           </div>
         </div>
@@ -236,7 +279,16 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
         <div className="container">
-          <h2>What Clients Say</h2>
+          
+          <motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  What Clients Say
+</motion.h2>
 
           <div className="grid">
             {testimonials.map((t, i) => (
@@ -252,7 +304,16 @@ const [menuOpen, setMenuOpen] = useState(false);
       {/* PRICING */}
       <section className="section">
         <div className="container">
-          <h2>Choose Your Plan</h2>
+       
+       <motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  Choose Your Plan
+</motion.h2>
 
 
 <div className="grid grid2">
@@ -292,12 +353,41 @@ const [menuOpen, setMenuOpen] = useState(false);
       </section>
 
       {/* GUARANTEE */}
-      <section className="section">
-        <div className="container">
-          <h2 className="h2border">100% Risk-Free</h2>
-          <p>If you don’t see results in 30 days, we refund you.</p>
-        </div>
-      </section>
+
+      <section className="section guarantee-section">
+  <div className="container">
+    <div className="guarantee-card">
+
+      <div className="guarantee-icon">
+        🛡️
+      </div>
+
+      <div className="guarantee-content">
+
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          100% Risk-Free
+        </motion.h2>
+
+        <p className="guarantee-label">
+          30-Day Guarantee
+        </p>
+
+        <p>
+          Train with confidence. If you don't see results in 30 days,
+          we'll refund your money.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* CTA FINAL */}
       <section className="cta">
@@ -313,13 +403,22 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 <section id="contact" className="section contact-pro">
   <div className="container">
-    <h2 >Contact Us</h2>
+
+<motion.h2
+  className="section-title"
+  initial={{ opacity: 0, y: 25 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  Contact Us
+</motion.h2>
 
     <div className="contact-grid">
 
       {/* INFO */}
       <div className="card apple contact-info">
-        <h3>Visit Our Clinic</h3>
+        <h3>Visit Our Gym</h3>
 
         <p>📍 1560 Broadway, New York, NY 10036</p>
         <p>📞 +1 (212) 555-1234</p>
